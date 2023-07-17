@@ -1,0 +1,221 @@
+.sidebar {
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+
+    padding: 1%;
+
+}
+
+.btn-expand {
+    color: white;
+    display: flex;
+    padding: 1%;
+
+    /* justify-content: center; */
+    align-items: center;
+    background-color: var(--color-bel);
+    border-radius: 3px;
+
+
+
+
+}
+
+
+
+.btn-expand>img {
+    width: 50px;
+    height: auto;
+}
+
+
+
+
+.btn-expand>img:hover {
+    background-color: var(--color-bel-second);
+    cursor: pointer;
+    transition: .3s all;
+}
+
+
+
+.container-menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--color-bel);
+    color: var(--light);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--color-bel-second);
+}
+
+
+
+.container-menu>img {
+    max-width: 40%;
+    margin: 5%;
+}
+
+.container-menu>p {
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--light);
+}
+
+.hide-menu {
+    width: 0;
+    transition: .5s;
+}
+
+.hide-menu>* {
+    opacity: 0;
+    /* transition: 1s; */
+}
+
+
+.show-menu {
+    width: 15rem;
+    transition: .5s all;
+}
+
+
+.show-menu>* {
+    opacity: 1;
+    transition: 1s all;
+}
+
+
+
+.btn-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 2;
+    font-size: 20px;
+    color: var(--light);
+    /* font-weight: bold; */
+}
+
+
+.btn-close:hover {
+    cursor: pointer;
+    font-weight: bold;
+    transition: .3s;
+}
+
+
+.separator {
+    width: 80%;
+    margin: 1.5%;
+    border: 1px solid var(--light);
+
+}
+
+
+.links {
+    height: 100%;
+    min-height: 100%;
+    background-color: var(--color-bel-second);
+    width: 98%;
+    border-radius: 3px;
+    padding: 1%;
+}
+
+.acordion {
+    width: 96%;
+    border-bottom: 1px solid var(--color-bel);
+    padding: 1.5%;
+}
+
+
+.acordion>a {
+    width: 100% !important;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1.5%;
+
+}
+
+
+.acordion:hover {
+    cursor: pointer;
+
+    background-color: var(--color-bel);
+    transition: .5s all;
+}
+
+.acordion>div {
+    width: 100%;
+    padding: 1%;
+    padding-left: 8%;
+}
+
+
+.acordion>div>ul {
+    list-style: none;
+    padding: 0;
+}
+
+.acordion>div>ul>li {
+    padding: 1%;
+    font-size: 15px
+}
+
+
+.show-acordion {
+    min-height: 1vh;
+    height: fit-content;
+    transition: 1s height;
+}
+
+.show-acordion>* {
+    opacity: 1;
+    transition: .5s opacity;
+}
+
+
+.hide-acordion {
+    overflow: hidden;
+    height: 0;
+    transition: .5s height;
+}
+
+
+
+.hide-acordion>* {
+
+    opacity: 0;
+    transition: .5s opacity;
+}
+
+
+.link {
+    margin: 2%;
+    width: 92%;
+    padding: 2%;
+}
+
+
+.link>Link {
+    width: 100%;
+    user-select: none;
+}
+
+
+.link>* {
+    color: var(--light);
+    text-decoration: none;
+}
+
+.link:hover {
+
+    cursor: pointer;
+    background-color: var(--color-bel);
+    transition: .5s all;
+}

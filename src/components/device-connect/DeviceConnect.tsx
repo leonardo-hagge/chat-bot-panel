@@ -206,22 +206,19 @@ function DeviceConnect() {
                     <div className="container-terminal">
                         <h2 className='ifo-dispositivos'>Dispositivos cadastados:</h2>
                         <div className='columns'>
-                            {
-                                !!devices && !!devices.length && (
-                                    <ul className='col-devices'>
-                                        <li onClick={startNewDevice}><Plus className='more' /></li>
-                                        {devices.map(d => (
-                                            <li key={d.id} className={`${d.id == device.id ? 'phone-selected' : ''}`} onClick={() => selectDevice(d)}>
-                                                <Pencil onClick={() => startUpdateDevice(d)} className='edit' />
-                                                <Phone className='phone' />
-                                                <p>{d.number}</p>
-                                                <p>{d.alias}</p>
-                                            </li>
-                                        ))}
-
-                                    </ul>
-                                )
-                            }
+                            <ul className='col-devices'>
+                                <li onClick={startNewDevice}><Plus className='more' /></li>
+                                {
+                                    !!devices && !!devices.length && devices.map(d => (
+                                        <li key={d.id} className={`${d.id == device.id ? 'phone-selected' : ''}`} onClick={() => selectDevice(d)}>
+                                            <Pencil onClick={() => startUpdateDevice(d)} className='edit' />
+                                            <Phone className='phone' />
+                                            <p>{d.number}</p>
+                                            <p>{d.alias}</p>
+                                        </li>
+                                    ))
+                                }
+                            </ul>
                         </div>
                         <br />
                         {/* <p className='info-select-veiculo'>Selecione ou cadastre algum dispositivo</p> */}
